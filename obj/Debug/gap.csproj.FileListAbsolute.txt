@@ -1,0 +1,6 @@
+D:\dela\gap\gap\obj\Debug\gap.csproj.AssemblyReference.cache
+D:\dela\gap\gap\obj\Debug\gap.csproj.SuggestedBindingRedirects.cache
+D:\dela\gap\gap\obj\Debug\gap.Form1.resources
+D:\dela\gap\gap\obj\Debug\gap.Properties.Resources.resources
+D:\dela\gap\gap\obj\Debug\gap.csproj.GenerateResource.cache
+D:\dela\gap\gap\obj\Debug\gap.csproj.CoreCompileInputs.cache

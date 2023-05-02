@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="gap.exe" version="1.0.0.0" publicKeyToken="df523bafd4615d61" language="neutral" processorArchitecture="amd64" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="gap" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+    <commandLine file="gap.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Параметры манифеста UAC
+          Если нужно изменить уровень контроля учетных записей Windows, замените 
+          узел requestedExecutionLevel одним из следующих значений.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+        Если нужно использовать виртуализацию файлов и реестра для обратной
+             совместимости, удалите узел requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.WMPLib.dll" size="53760">
+      <assemblyIdentity name="AxInterop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>1wFWwn4BZrulWcRXAW/7pQdsbQRFu0WWHp7qovLuMQk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="gap.exe" size="12760">
+      <assemblyIdentity name="gap" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kamFIAx9ttGi2lYLEGwuW7PRhsvIOmBRy0PJWddkZy8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.WMPLib.dll" size="330752">
+      <assemblyIdentity name="Interop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4h5KgKR2JF5qoF9KTgu4SW9L3bnBSIIZoToF9uksOkk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="colors\green.jpg" size="5200">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HnLLmFqsBdYUnGOxUvpVZ5U/NFsN/+ods5ahmHfX8go=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="colors\red.jpg" size="540755">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U3l+/qV2xfR2xmYRVFCAShgqICmQEmIQO1nrPvSMdw0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="gap.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="video\car.mkv" size="1718755">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SJg91o2l49LU6O41Ovgmpq9AB/+cmn61JZZnCf+zdX4=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-R960LMM\ррр" issuerKeyHash="3688b513613d9d27c83bab242790b3949a3c653c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>DfAN6hIbISlXTDsDqmI3MpyYumNr2YdKrxWRitUnphM=</DigestValue></Reference></SignedInfo><SignatureValue>k3eyAGDQ7r4iGLtYrmaWgyxuoGtNEcfqihRQzvGF7LfMUMHr+/8Kv7bI6wGEpNqDwOtmu6pCZ1i/lzdm0hf3iZxSINgFkuDUJxavMcg5Bf9+lpIIzTiiAVK939BrmEh+Knr8Lolxj/2AnzAzRpP35uIb9qgnWYOgaDPMj7ql1yM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xWHlfjzARAWUWLZA80LWjWB3zGSp+PgEmJXOauQiX5T9zCTqMmadt+mc0L+dkiAToZScoH5ZQzmZuMU0OEF0SVeCeLe4YIuHsHZ54YYcG1eHW3zoalCuGTdl3T0aglalGjX3kOUBEW+cSLzylGimZIQGywCdKjCKulY7a7U85J0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="13a627d58a9115af4a87d96b63ba989c323762aa033b4c5729211b12ea0df00d" Description="" Url=""><as:assemblyIdentity name="gap.exe" version="1.0.0.0" publicKeyToken="df523bafd4615d61" language="neutral" processorArchitecture="amd64" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-R960LMM\ррр</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>X0qB7tTyJY5g0MVFaC/Qxapm3HHmWvepuyOQswj4ohg=</DigestValue></Reference></SignedInfo><SignatureValue>HcsdPrLP87zB4WMg+A1rbyzz91C+fH//kkq1h8QAHPj8FVPQl7PC5n2+EmZTspQOQ4dhod5bvAoxpjOP0UBfZlaJw07/Z9nwJiZIWUF+sLY1cJe/PHIYc9Ca4ZbWDaGj12/9ZSeIoHRnFJOJBSiyJDA7WWdIL9jxy/i/xiInnkE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xWHlfjzARAWUWLZA80LWjWB3zGSp+PgEmJXOauQiX5T9zCTqMmadt+mc0L+dkiAToZScoH5ZQzmZuMU0OEF0SVeCeLe4YIuHsHZ54YYcG1eHW3zoalCuGTdl3T0aglalGjX3kOUBEW+cSLzylGimZIQGywCdKjCKulY7a7U85J0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQUo4janYn3qtJXz7d9S5/3DANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYARABFAFMASwBUAE8AUAAtAFIAOQA2ADAATABNAE0AXARABEAEQDAeFw0yMzA1MDIwNzExMDBaFw0yNDA1MDExMzExMDBaMDExLzAtBgNVBAMeJgBEAEUAUwBLAFQATwBQAC0AUgA5ADYAMABMAE0ATQBcBEAEQARAMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDFYeV+PMBEBZRYtkDzQtaNYHfMZKn4+ASYlc5q5CJflP3MJOoyZp236ZzQv52SIBOhlJygfllDOZm4xTQ4QXRJV4J4t7hgi4ewdnnhhhwbV4dbfOhqUK4ZN2XdPRqCVqUaNfeQ5QERb5xIvPKUaKZkhAbLAJ0qMIq6VjtrtTzknQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAENsob6+rFD5tf4o3npp8KGt43gfuFKIkEaoEcPzTd1KfblnQp4mOL5TQ/FlLXHDE/PeoUaVQ1TOh1vdKoz8YXib/zz+ZpSqVm1Nts5HfpTdowg5U7aQZWG1rkpc/v1tq+wNUiHt+jwyPMeAe+zgrYcy4nJDGif5Rbl/sf2W4Mrm</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
