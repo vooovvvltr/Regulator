@@ -1,0 +1,167 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.VisualBasic;
+
+namespace gap
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        //pictureBoxA.Image = Image.FromFile("D:\\dela\\rrr\\colors\\red.jpg");
+        //pictureBoxA.Image = Image.FromFile("D:\\dela\\rrr\\colors\\green.jpg");
+        //pictureBoxB.Image = Image.FromFile("D:\\dela\\rrr\\colors\\red.jpg");
+        //pictureBoxB.Image = Image.FromFile("D:\\dela\\rrr\\colors\\green.jpg");
+
+        public class Meto
+        {
+            public static int a = 0;
+            public static int b = 0;
+            public static int c = 0;
+            public static int d = 0;
+
+        }
+
+      
+
+        private void button1_Click(object sender, EventArgs e) // side A
+        {
+            int Count1 = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("Enter count of cars on A:", "InputBox", "Count"));
+            int Count2 = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("Enter count of cars on A:", "InputBox", "Count"));
+
+            
+            if(Count1 > Count2)
+            {
+                Meto.a = Count1;
+            }
+            else
+            {
+                Meto.a = Count2;
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e) // side B
+        {
+            int Count3 = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("Enter count of cars on B:", "InputBox", "Count"));
+            int Count4 = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("Enter count of cars on B:", "InputBox", "Count"));
+
+            if (Count3 > Count4)
+            {
+                Meto.c = Count3;
+            }
+            else
+            {
+                Meto.c = Count4;
+            }
+
+        }
+  
+        private void button3_Click(object sender, EventArgs e) //Regulator
+        {
+            if (Meto.a == 0)
+            {
+                if (System.Windows.Forms.Application.MessageLoop)
+                {
+                    // WinForms app
+                    System.Windows.Forms.Application.Exit();
+                }
+                else
+                {
+                    // Console app
+                    System.Environment.Exit(1);
+                }
+            }
+
+            if (Meto.a > Meto.c)
+            {
+                timer1.Enabled = true;         
+                pictureBox1.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\green.jpg");
+                pictureBox2.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\red.jpg");
+            }
+            else
+            {
+               
+                timer2.Enabled = true;
+                pictureBox2.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\green.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\red.jpg");
+            }
+            
+        }
+
+        int i = Meto.a * 7 + 5;
+
+        private void timer1_Tick(object sender, EventArgs e) //side A
+        {
+            label1.Text = i.ToString();
+            i--;
+            if (i > 120)
+            {
+                i = 119;
+            }
+
+            if (i == -1)
+            {
+                timer1.Enabled = false;
+                pictureBox1.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\red.jpg");
+                pictureBox2.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\green.jpg");
+                timer2.Enabled = true;
+                if (f == -1)
+                {
+                    timer1.Enabled = false;
+                    timer2.Enabled = false;
+                    pictureBox2.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\red.jpg");
+                    MessageBox.Show("Return data");
+                    f = 5;   
+                }
+            }
+        }
+
+        int f = Meto.c * 7 + 5;
+
+        private void timer2_Tick(object sender, EventArgs e) //side B
+        {
+            label2.Text = f.ToString();
+            f--;
+            if (f > 120)
+            {
+                f = 119;
+            }
+
+            if (f == -1)
+            {
+                timer2.Enabled = false;            
+                pictureBox2.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\red.jpg");
+                pictureBox1.Image = Image.FromFile("D:\\dela\\gap\\gap\\colors\\green.jpg");
+                timer1.Enabled = true;
+                if (i == -1)
+                {
+                    timer2.Enabled = false;
+                    timer1.Enabled = false;
+                    MessageBox.Show("Return data");
+                    i = 5;
+                }
+            }
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = @"D:\dela\gap\gap\video\car.mkv";
+        }
+     
+        
+    }
+}
+   
+ 
